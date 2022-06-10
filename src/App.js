@@ -79,7 +79,7 @@ function App() {
       </div>
     
       {/* Monsters Chasing the gang */}
-      <div className='monster-chase'>Monster Chase Parade
+      <div className='monster-chase'>
         <MonsterChase monsterChase={monsterChase} />
         <div className='monster-chase-buttons'>
 
