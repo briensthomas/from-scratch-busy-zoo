@@ -19,6 +19,10 @@ header {
   align-items: center;
 }
 
+header h2 {
+  color: antiquewhite;
+}
+
 
 /* styling for background image */
 .background {
