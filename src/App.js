@@ -1,7 +1,8 @@
 import './App.css';
 import MysteryMachine from './MysteryMachine.js';
-import { useState } from 'react';
+import MonsterChase from './MonsterChase.js';
 
+import { useState } from 'react';
 
 
 function App() {
@@ -10,10 +11,36 @@ function App() {
 
   const [gangMysteryMachine, setGangMysteryMachine] = useState(true);
 
+  const [monsterChase, setMonsterChase] = useState(['Daphne-Running', 'Scooby-Running', 'Velma-Running']);
+
+  function handleAddDaphne() {
+    monsterChase.push('Daphne-Running');
+
+    setMonsterChase(monsterChase.slice());
+  }
+
+  function handleAddScooby() {
+    monsterChase.push('Scooby-Running');
+
+    setMonsterChase(monsterChase.slice());
+  }
+
+  function handleAddVelma() {
+    monsterChase.push('Velma-Running');
+
+    setMonsterChase(monsterChase.slice());
+  }
+
+  function handleAddWraith() {
+    monsterChase.unshift('Wraith-Chase');
+  
+    setMonsterChase(monsterChase.slice());
+  }
+
 
   return (
     <div className="App">
-      <header><h2>Muscle Zoo</h2></header>
+      <header><h2>What's New Scooby Doo?</h2></header>
       <div className='size-increments'>
         <div className='left'>
           <div className='size-buttons'>
@@ -41,19 +68,24 @@ function App() {
           <img src='./ShaggyRogers.png' width={shaggySize * 10}/>
         </div>
       </div>
-{/* Gang in and out of the Mystery Machine */}
+
+      {/* Gang in and out of the Mystery Machine */}
       <div className='mystery-machine'>
         <MysteryMachine gangMysteryMachine={gangMysteryMachine} />
 
         <button onClick={() => setGangMysteryMachine(!gangMysteryMachine)}>Get the Gang out of here!</button>
       </div>
-{/* Monsters Chasing the gang */}
-      <div>Monster Chase Parade
+    
+      {/* Monsters Chasing the gang */}
+      <div className='monster-chase'>Monster Chase Parade
+        <MonsterChase monsterChase={monsterChase} />
+        <div className='monster-chase-buttons'>
 
-        <button>Run, Scooby!</button>
-        <button>Run, Daphne!</button>
-        <button>Run, Velma!</button>
-        <button>Wraith, get those meddling kids!</button>
+          <button onClick={handleAddScooby}>Run, Scooby!</button>
+          <button onClick={handleAddDaphne}>Run, Daphne!</button>
+          <button onClick={handleAddVelma}>Run, Velma!</button>
+          <button onClick={handleAddWraith}>Wraith, get those meddling kids!</button>
+        </div>
       </div>
       <p className='image-attribution'>
         By http://www.cartoonwatcher.com/scooby-doo/scooby-doo-characters.php, 

@@ -2,6 +2,7 @@
 
 button { 
   margin: 5px;
+  width: fit-content;
 }
 
 
@@ -71,3 +72,25 @@ header {
 }
 
 /* Styling for Monster Chase Parade */
+
+.monster-chase {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.monster-chase-list {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+}
+
+.monster-chase img {
+  height: 100px;
+}
+
+.monster-chase-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
