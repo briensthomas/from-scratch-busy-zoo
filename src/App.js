@@ -6,6 +6,8 @@ import MonsterChase from './MonsterChase.js';
 import spookyImg from './spookyBackground.jpg';
 import { useState } from 'react';
 
+import ThemeSong from './ThemeSong.js';
+
 
 function App() {
   const [scoobySize, setScoobySize] = useState(5);
@@ -40,9 +42,12 @@ function App() {
   }
 
 
+
   return (
     <div className='background' style={{ backgroundImage: `url(${spookyImg})` }}>
-      <header><h2>What's New Scooby Doo?</h2></header>
+      <header><h2>What's New Scooby Doo?</h2>
+        <ThemeSong />
+      </header>
       <div className='size-increments'>
         <div className='left'>
           <div className='size-buttons'>
