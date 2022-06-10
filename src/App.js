@@ -10,13 +10,28 @@ function App() {
       <header><h2>Muscle Zoo</h2></header>
       <div className='muscle-competition'>
         <div className='left'>
-          <button onClick={() => setScoobySize(scoobySize + 1)}>
+          <div className='size-buttons'>
+            <button onClick={() => setScoobySize(scoobySize + 1)}>
             Give Scooby a scooby snack!
-          </button>
+            </button>
+
+            <button onClick={() => setScoobySize(scoobySize - 1)}> 
+              Ruh-roh Raggy!
+            </button>
+          </div>
           <img src='./Scooby-Doo.png' width={scoobySize * 10} />
         </div>
+
         <div className='right'>
-          <button onClick={() => setShaggySize(shaggySize + 1)}>Give Shaggy a scooby snack!</button>
+          <div>
+            <button onClick={() => setShaggySize(shaggySize + 1)}>
+              Give Shaggy a scooby snack!
+            </button>
+
+            <button onClick={() => setShaggySize(shaggySize - 1)}>
+              Like, zoinks Scoob! What was that?!
+            </button>
+          </div>
           <img src='./ShaggyRogers.png' width={shaggySize * 10}/>
         </div>
         
