@@ -1,6 +1,12 @@
+/* Universal Styling */
+
 button { 
   margin: 5px;
 }
+
+
+/* Header Styling */
+
 
 header {
   height: 50px;
@@ -12,13 +18,17 @@ header {
   align-items: center;
 }
 
-.muscle-competition {
+
+/* Elements for size increment portion of page */
+
+
+.size-increments {
   display: flex;
   flex-direction: row;
   width: 100%;
 }
 
-.muscle-competition img {
+.size-increments img {
   display: flex;
   margin: 10px;
   border-radius: 5px;
@@ -30,7 +40,6 @@ header {
   flex-direction: column;
   align-items: center;
   padding: 10px;
-  border: 3px solid black;
 }
 
 .right {
@@ -39,10 +48,26 @@ header {
   flex-direction: column;
   align-items: center;
   padding: 10px;
-  border: 3px solid black;
-
 }
 
 .image-attribution {
   font-size: 8px;
 }
+
+
+/* Styling for Gang in/Out of Mystery Machine */
+
+.mystery-machine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 25px 0px;
+}
+
+.mystery-machine img {
+  width: 300px;
+  display: flex;
+}
+
+/* Styling for Monster Chase Parade */

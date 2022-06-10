@@ -1,14 +1,20 @@
 import './App.css';
+import MysteryMachine from './MysteryMachine.js';
 import { useState } from 'react';
+
+
 
 function App() {
   const [scoobySize, setScoobySize] = useState(5);
   const [shaggySize, setShaggySize] = useState(5);
 
+  const [gangMysteryMachine, setGangMysteryMachine] = useState(true);
+
+
   return (
     <div className="App">
       <header><h2>Muscle Zoo</h2></header>
-      <div className='muscle-competition'>
+      <div className='size-increments'>
         <div className='left'>
           <div className='size-buttons'>
             <button onClick={() => setScoobySize(scoobySize + 1)}>
@@ -34,15 +40,14 @@ function App() {
           </div>
           <img src='./ShaggyRogers.png' width={shaggySize * 10}/>
         </div>
-        
       </div>
-      
+{/* Gang in and out of the Mystery Machine */}
+      <div className='mystery-machine'>
+        <MysteryMachine gangMysteryMachine={gangMysteryMachine} />
 
-      <div>Open/Closed
-
-        <button>Is the gang in the mystery machine?</button>
+        <button onClick={() => setGangMysteryMachine(!gangMysteryMachine)}>Get the Gang out of here!</button>
       </div>
-
+{/* Monsters Chasing the gang */}
       <div>Monster Chase Parade
 
         <button>Run, Scooby!</button>
