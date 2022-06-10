@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import './App.css';
 import MysteryMachine from './MysteryMachine.js';
 import MonsterChase from './MonsterChase.js';
