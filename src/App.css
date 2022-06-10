@@ -20,6 +20,15 @@ header {
 }
 
 
+/* styling for background image */
+.background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+
+
 /* Elements for size increment portion of page */
 
 

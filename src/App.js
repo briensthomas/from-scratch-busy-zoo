@@ -3,6 +3,7 @@ import './App.css';
 import MysteryMachine from './MysteryMachine.js';
 import MonsterChase from './MonsterChase.js';
 
+import spookyImg from './spookyBackground.jpg';
 import { useState } from 'react';
 
 
@@ -40,7 +41,7 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className='background' style={{ backgroundImage: `url(${spookyImg})` }}>
       <header><h2>What's New Scooby Doo?</h2></header>
       <div className='size-increments'>
         <div className='left'>
