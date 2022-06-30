@@ -2,7 +2,7 @@
 import './App.css';
 import MysteryMachine from './MysteryMachine.js';
 import MonsterChase from './MonsterChase.js';
-
+import CustomButton from './CustomButton';
 import spookyImg from './cemetery.jpg';
 import { useState } from 'react';
 
@@ -51,26 +51,26 @@ function App() {
       <div className='size-increments'>
         <div className='left'>
           <div className='size-buttons'>
-            <button onClick={() => setScoobySize(scoobySize + 1)}>
+            <CustomButton onClick={() => setScoobySize(scoobySize + 1)}>
             Give Scooby a scooby snack!
-            </button>
+            </CustomButton>
 
-            <button onClick={() => setScoobySize(scoobySize - 1)}> 
+            <CustomButton onClick={() => setScoobySize(scoobySize - 1)}> 
               Ruh-roh Raggy!
-            </button>
+            </CustomButton>
           </div>
           <img src='./Scooby-Doo.png' width={scoobySize * 10} />
         </div>
 
         <div className='right'>
           <div>
-            <button onClick={() => setShaggySize(shaggySize + 1)}>
+            <CustomButton onClick={() => setShaggySize(shaggySize + 1)}>
               Give Shaggy a scooby snack!
-            </button>
+            </CustomButton>
 
-            <button onClick={() => setShaggySize(shaggySize - 1)}>
+            <CustomButton onClick={() => setShaggySize(shaggySize - 1)}>
               Like, zoinks Scoob! What was that?!
-            </button>
+            </CustomButton>
           </div>
           <img src='./ShaggyRogers.png' width={shaggySize * 10}/>
         </div>
@@ -80,7 +80,7 @@ function App() {
       <div className='mystery-machine'>
         <MysteryMachine gangMysteryMachine={gangMysteryMachine} />
 
-        <button onClick={() => setGangMysteryMachine(!gangMysteryMachine)}>Get the Gang out of here!</button>
+        <CustomButton onClick={() => setGangMysteryMachine(!gangMysteryMachine)}>Get the Gang out of here!</CustomButton>
       </div>
     
       {/* Monsters Chasing the gang */}
@@ -88,10 +88,10 @@ function App() {
         <MonsterChase monsterChase={monsterChase} />
         <div className='monster-chase-buttons'>
 
-          <button onClick={handleAddScooby}>Run, Scooby!</button>
-          <button onClick={handleAddDaphne}>Run, Daphne!</button>
-          <button onClick={handleAddVelma}>Run, Velma!</button>
-          <button onClick={handleAddWraith}>Wraith, get those meddling kids!</button>
+          <CustomButton onClick={handleAddScooby}>Run, Scooby!</CustomButton>
+          <CustomButton onClick={handleAddDaphne}>Run, Daphne!</CustomButton>
+          <CustomButton onClick={handleAddVelma}>Run, Velma!</CustomButton>
+          <CustomButton onClick={handleAddWraith}>Wraith, get those meddling kids!</CustomButton>
         </div>
       </div>
       <p className='image-attribution'>
