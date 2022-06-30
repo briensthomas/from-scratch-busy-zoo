@@ -3,7 +3,7 @@ import './App.css';
 import MysteryMachine from './MysteryMachine.js';
 import MonsterChase from './MonsterChase.js';
 
-import spookyImg from './spookyBackground.jpg';
+import spookyImg from './cemetery.jpg';
 import { useState } from 'react';
 
 import ThemeSong from './ThemeSong.js';
