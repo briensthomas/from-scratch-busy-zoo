@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
+/* Universal Styling */
+
+button { 
+  margin: 5px;
+  width: fit-content;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* Header Styling */
+
+
+header {
+  height: 50px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header h2 {
+  color: antiquewhite;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+/* styling for background image */
+
+
+.background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+}
+
+
+
+/* Elements for size increment portion of page */
+
+
+.size-increments {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.size-increments img {
+  display: flex;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.left {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.right {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+
+
+/* Styling for Gang in/Out of Mystery Machine */
+
+.mystery-machine {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  margin: 25px 0px;
+}
+
+.mystery-machine img {
+  width: 300px;
+  display: flex;
+}
+
+
+
+/* Styling for Monster Chase Parade */
+
+.monster-chase {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.monster-chase-list {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+}
+
+.monster-chase img {
+  height: 100px;
+}
+
+.monster-chase-buttons {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+.image-attribution {
+    font-size: 8px;
+    color: antiquewhite;
   }
-  to {
-    transform: rotate(360deg);
+
+  .admin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-}
+  .charts {
+    width: 80%;
+    display: flex;
+    align-items: center;
+  }
+
+  .tables {
+    width: 80%;
+    display: flex;
+    align-content: center;
+  }
