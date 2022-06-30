@@ -20,8 +20,15 @@ test('Expects there to be one instance of the daphne image based on the alt text
   expect(imagesAfterClick.length).toBe(2);
 });
 
-test('expects to see the', () => {
+test('expects to see picture of the meddling kids on load', () => {
   render(<App />);
-  const pictureOnLoad = screen.getByAltText(/picture of the meddling kids/i);
+  const pictureOnLoad = screen.getByAltText(/Picture of the meddling kids/i);
   expect(pictureOnLoad).toBeInTheDocument();
+
+  const gangButton = screen.getByText(/Get the Gang out of here!/i);
+
+  fireEvent.click(gangButton);
+
+  const pictureAfterClick = screen.getByAltText(/Meddling kids driving away in the van/i);
+  expect(pictureAfterClick).toBeInTheDocument();
 });
