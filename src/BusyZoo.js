@@ -4,44 +4,19 @@ import MysteryMachine from './MysteryMachine.js';
 import MonsterChase from './MonsterChase.js';
 import CustomButton from './CustomButton';
 import spookyImg from './cemetery.jpg';
-import { useState } from 'react';
+import { useZooContext } from './ZooProvider.js';
 
 import ThemeSong from './ThemeSong.js';
 
 
 function BusyZoo() {
-  const [scoobySize, setScoobySize] = useState(5);
-  const [shaggySize, setShaggySize] = useState(5);
-
-  const [gangMysteryMachine, setGangMysteryMachine] = useState(true);
-
-  const [monsterChase, setMonsterChase] = useState(['Daphne-Running', 'Scooby-Running', 'Velma-Running']);
-
-  function handleAddDaphne() {
-    monsterChase.push('Daphne-Running');
-
-    setMonsterChase(monsterChase.slice());
-  }
-
-  function handleAddScooby() {
-    monsterChase.push('Scooby-Running');
-
-    setMonsterChase(monsterChase.slice());
-  }
-
-  function handleAddVelma() {
-    monsterChase.push('Velma-Running');
-
-    setMonsterChase(monsterChase.slice());
-  }
-
-  function handleAddWraith() {
-    monsterChase.unshift('Wraith-Chase');
-  
-    setMonsterChase(monsterChase.slice());
-  }
-
-
+  const {
+    scoobySize, setScoobySize,
+    shaggySize, setShaggySize,
+    gangMysteryMachine, setGangMysteryMachine,
+    handleAddDaphne, handleAddScooby,
+    handleAddVelma, handleAddWraith
+  } = useZooContext();
 
   return (
     <div className='background' style={{ backgroundImage: `url(${spookyImg})` }}>
@@ -85,7 +60,7 @@ function BusyZoo() {
     
       {/* Monsters Chasing the gang */}
       <div className='monster-chase'>
-        <MonsterChase monsterChase={monsterChase} />
+        <MonsterChase />
         <div className='monster-chase-buttons'>
 
           <CustomButton onClick={handleAddScooby}>Run, Scooby!</CustomButton>

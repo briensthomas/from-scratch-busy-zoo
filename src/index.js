@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import ZooProvider from './ZooProvider';
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ZooProvider>
+      <App />
+    </ZooProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
